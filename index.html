@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Header + theme styles -->
+  <link rel="stylesheet" href="icons.css">
+
+  <title>To-Do App</title>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h2 class="logo">
+      <img src="assets/todo.svg" class="icon" alt="logo">
+      To-Do App
+    </h2>
+
+    <!-- Theme toggle -->
+    <div class="theme">
+      <input type="checkbox" id="toggle">
+      <label for="toggle">
+        <div class="toggle-circle">
+          <img src="assets/sun.svg" class="icon-toggle sun">
+          <img src="assets/moon.svg" class="icon-toggle moon">
+        </div>
+      </label>
+    </div>
+  </header>
+
+  <!-- Main Section-->
+  <main>
+    <div class="container">
+
+      <!-- Task input -->
+      <div class="taskinput">
+        <h3>Add tasks</h3>
+
+        <div class="input-row">
+          <input type="text" id="taskInput" placeholder="Enter task">
+          <button class="add" id="addTask">Add</button>
+        </div>
+      </div>
+
+      <!-- Filter buttons -->
+      <div class="btn-group">
+        <button class="btn">ALL</button>
+        <button class="btn">Pending</button>
+        <button class="btn">Completed</button>
+      </div>
+
+      <!-- Task list -->
+      <ul id="taskList"></ul>
+
+    </div>
+  </main>
+
+  <!-- Theme + app logic -->
+  <script src="theme.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>

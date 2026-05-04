@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+
+}
+
+body {
+  background: #f4f4f9;
+  color: #333;
+  min-height: 100vh;
+  transition: 0.3s ease;
+
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+
+}
+
+/* main card */
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+
+}
+
+.taskinput input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+
+}
+
+.taskinput input:focus {
+  border-color: #4a90e2;
+
+}
+
+.taskinput .add {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+
+/*Filtes*/
+.btn-group {
+  display: flex;
+  margin: 20px 0;
+
+}
+
+.btn {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px;
+  border: none;
+  background: #e9edf3;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+
+}
+
+/* active filter */
+.btn.active {
+  background: #4a90e2;
+  color: white;
+
+}
+
+/* task List */
+#taskList {
+  list-style: none;
+
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: #f9fbfd;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  transition: all 0.2s ease;
+
+}
+
+/* hover effect */
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.task-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+/* task text always stable */
+.task-text {
+  color: inherit;
+
+}
+
+/* completed */
+.completed {
+  text-decoration: line-through;
+  color: #999;
+
+}
+
+/* Icon Buttons */
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+
+}
+
+.icon-btn img {
+  width: 18px;
+  height: 18px;
+  display: block;
+  transition: transform 0.15s ease;
+
+}
+
+.icon-btn:hover img {
+  transform: scale(1.15);
+  
+}
+
+/* Animations */
+.task-item.adding {
+  opacity: 0;
+  transform: translateY(-10px);
+
+}
+
+.task-item.removing {
+  opacity: 0;
+  transform: translateY(10px);
+
+}
+

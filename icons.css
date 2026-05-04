@@ -1,0 +1,113 @@
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+}
+
+/* logo Icon */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+}
+
+.logo .icon {
+  width: 26px;
+  height: 26px;
+
+}
+
+/* Toggle  */
+.theme input {
+  display: none;
+
+}
+
+.theme label {
+  width: 60px;
+  height: 28px;
+  background: #ccc;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+
+}
+
+/* moving circle */
+.toggle-circle {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+
+}
+
+/* toggle movement */
+#toggle:checked + label .toggle-circle {
+  transform: translateX(32px);
+  background: #4a90e2;
+
+}
+
+/* icons */
+.icon-toggle {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+
+}
+
+.sun { opacity: 1; }
+.moon { opacity: 0; }
+
+#toggle:checked + label .sun { opacity: 0; }
+#toggle:checked + label .moon { opacity: 1; }
+
+/* Dark Theme*/
+body.dark {
+  background: #1e1f26;
+
+}
+
+/* containers only */
+body.dark header,
+body.dark .container {
+  background: #2a2c35;
+  color: #f1f1f1;
+
+}
+
+/* task cards */
+body.dark .task-item {
+  background: #3a3d4a;
+
+}
+
+/* task text */
+body.dark .task-text {
+  color: #f1f1f1;
+
+}
+
+/* buttons */
+body.dark .btn {
+  background: #3a3d4a;
+  color: #fff;
+
+}
